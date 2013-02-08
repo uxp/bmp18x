@@ -1,0 +1,10 @@
+BMP18x Linux device driver
+--------------------------
+
+This driver implements support for Bosch Sensortec's BMP18x pressure sensors, including BMP085 and BMP180.
+The driver is interfaced through the following sysfs parameters:
+
+The project is hosted at Unixpheres homepage: http://www.unixphere.com/projects/bmp18x.html
+
+It has been contributed and accepted in to the Linux kernel:
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux.git;a=commit;h=985087dbcb0265f46e8651fdc7e974f8a7184423
