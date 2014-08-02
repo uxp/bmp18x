@@ -59,7 +59,7 @@ static const struct bmp18x_bus_ops bmp18x_spi_bus_ops = {
 	.write_byte	= bmp18x_spi_write_byte
 };
 
-static int __devinit bmp18x_spi_probe(struct spi_device *client)
+static int bmp18x_spi_probe(struct spi_device *client)
 {
 	int rc;
 	struct bmp18x_data_bus data_bus = {
@@ -121,7 +121,7 @@ static struct spi_driver bmp18x_spi_driver = {
 	.id_table	= bmp18x_id,
 	.probe		= bmp18x_spi_probe,
 	.shutdown	= bmp18x_spi_shutdown,
-	.remove		= __devexit_p(bmp18x_spi_remove)
+	.remove		= bmp18x_spi_remove
 };
 
 static int __init bmp18x_spi_init(void)

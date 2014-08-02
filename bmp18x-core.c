@@ -46,6 +46,7 @@
 */
 
 #include <linux/device.h>
+#include <linux/module.h>
 #include <linux/init.h>
 #include <linux/slab.h>
 #include <linux/delay.h>
@@ -381,7 +382,7 @@ exit:
 	return status;
 }
 
-__devinit int bmp18x_probe(struct device *dev, struct bmp18x_data_bus *data_bus)
+int bmp18x_probe(struct device *dev, struct bmp18x_data_bus *data_bus)
 {
 	struct bmp18x_data *data;
 	struct bmp18x_platform_data *pdata = dev->platform_data;
